@@ -19,7 +19,7 @@ urllib3.disable_warnings()
 headers_test = {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer eyJrIjoiMDQ0ZHkxTnY1N09ndjRmSVRJWG9UMXFvcHl5SWgwSzQiLCJuIjoiZ29tb3ZrZXkiLCJpZCI6MX0='
+        'Authorization': '*****************'
     }
 
 
@@ -27,13 +27,12 @@ headers_test = {
 headers = {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer eyJrIjoiaktXMTM1S3hVRjFSZXBVR0M3bWZhVWFSNDZxYThTTFYiLCJuIjoiYWRtaW5fZm9yX2Ryb3Bfd29yayIsImlkIjoxfQ=='
+        'Authorization': '***************************'
     }
 
-proxies = {"http":"http://msk-proxy.megafon.ru:3128", "https":"http://msk-proxy.megafon.ru:3128"}
+proxies = {"http":"**********************************"}
 
-grafana_headers = {'Authorization': 'Bearer eyJrIjoiN0FDOXNXTWNSSXlJVXBWUW8yNkFwcUxNeU9GVldnS00iLCJuIjoib3Vfc3BhY2UiLCJpZCI6MX0=', 'Content-Type': 'application/json'}
-# reqs = requests.get(f'https://grafana.megafon.ru/api/dashboards/uid/t17tBsMnk', headers=headers)
+grafana_headers = {'Authorization': '*************************************', headers=headers)
 # reqs_name = reqs.json()
 
 
@@ -232,7 +231,7 @@ def check_queries(metric, target, datasource):
     influxql_metric = ""
     promql_metric = metric
     promql_metric = promql_metric.replace("{","%7B").replace("}","%7D").replace('"','%22').replace("=","%3D").replace(",","%2C").replace("/","%2F").replace("|","%7C").replace("[","%5B").replace("]","%5D").replace(" ","%20").replace("'","%27")
-    promql_metric = promql_metric + "%0D&start=1634332080&end=1634342880&step=120"
+    promql_metric = promql_metric 
     if 'measurement' in target:
         mes = target['measurement']
         if 'select' in target:
